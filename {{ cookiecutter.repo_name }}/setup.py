@@ -2,10 +2,10 @@ from setuptools import setup, find_packages
 
 
 setup(
-    name='youtube.playlists',
+    name='{{ cookiecutter.project }}',
     version=0.0,
-    author='Cyril Robert',
-    author_email='cyril@hippie.io',
+    author='{{ cookiecutter.ful_name }}',
+    author_email='{{ cookiecutter.email }}',
     url='http://67labs.com',
     install_requires=[
         'setuptools',
@@ -13,9 +13,9 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     zip_safe=False,
-    namespace_packages=['youtube.playlists', ],
+    namespace_packages=['{{ cookiecutter.project }}', ],
     entry_points={
         'console_scripts': [
-            'youtube.playlists = youtube.playlists.main:run',
+            '{{ cookiecutter.project }} = {{ cookiecutter.project }}.main:run',
         ]},
 )
