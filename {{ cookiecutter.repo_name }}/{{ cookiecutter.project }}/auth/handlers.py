@@ -1,11 +1,11 @@
 # This import is very weird
 import tornado, tornado.auth
 
-import {{ cookiecutter.app }}.handler
-from {{ cookiecutter.app }}.auth.models import User
+import {{ cookiecutter.project }}.handler
+from {{ cookiecutter.project }}.auth.models import User
 
 
-class LoginHandler({{ cookiecutter.app }}.handler.Handler,
+class LoginHandler({{ cookiecutter.project }}.handler.Handler,
                    tornado.auth.GoogleMixin):
     @tornado.web.asynchronous
     @tornado.gen.coroutine
@@ -34,7 +34,7 @@ class LoginHandler({{ cookiecutter.app }}.handler.Handler,
             self.authenticate_redirect()
 
 
-class LogoutHandler({{ cookiecutter.app }}.handler.Handler):
+class LogoutHandler({{ cookiecutter.project }}.handler.Handler):
     def get(self):
         self.clear_cookie("user")
         self.redirect(self.get_argument("next", "/"))

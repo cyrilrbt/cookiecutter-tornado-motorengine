@@ -1,6 +1,6 @@
 import tornado
 
-from {{ cookiecutter.app }}.auth.models import User
+from {{ cookiecutter.project }}.auth.models import User
 
 
 class Handler(tornado.web.RequestHandler):
