@@ -3,6 +3,7 @@
 	"email": "cyril@hippie.io",
 	"github_username": "cyrilrbt",
 	"project_name": "Something",
+  "project": "poop",
   "app": "Test",
   "db_name": "app"
 }
