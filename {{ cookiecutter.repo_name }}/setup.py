@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 setup(
     name='{{ cookiecutter.project }}',
     version=0.0,
-    author='{{ cookiecutter.ful_name }}',
+    author='{{ cookiecutter.full_name }}',
     author_email='{{ cookiecutter.email }}',
     url='http://67labs.com',
     install_requires=[
